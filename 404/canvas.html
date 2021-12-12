@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/A-frame/js/canvas.js"></script>
+  <link rel="stylesheet" type="text/css" href="/A-frame/css/canvas.css" media="screen" />
+  
+  <title>360experience</title>
+</head>
+<body>
+  <svg viewBox="0 0 1320 300">
+
+    <!-- Symbol -->
+    <symbol id="s-text">
+      <text class="text1" text-anchor="middle"
+            x="50%" y="30%" dy=".35em">
+        Se recomienda activar el audio
+        
+      </text>
+      
+    </symbol>  
+  
+    <!-- Duplicate symbols -->
+    <use xlink:href="#s-text" class="text"
+         ></use>
+    <use xlink:href="#s-text" class="text"
+         ></use>
+    <use xlink:href="#s-text" class="text"
+         ></use>
+    <use xlink:href="#s-text" class="text"
+         ></use>
+    <use xlink:href="#s-text" class="text"
+         ></use>
+  
+  </svg>
+  <form action="/A-frame/3d_index.html">
+
+    <button id="button">Vivir experiencia</button>
+  </form>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Villa de Agüimes</title>
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <script src="js/click_sound.js"></script>
+  <script src="js/color_changer.js"></script>
+  <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+  <script src="/A-frame/js/canvas.js"></script>
+  <script src="/A-frame/js/menu.js"></script>
+  <script src="/A-frame/js/canvas.js"></script>
+  <link rel="stylesheet" type="text/css" href="/A-frame/css/styles.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/A-frame/css/canvas.css" media="screen" />
+
+  
+</head>
+<body>
+
+  <canvas id="reveal-effect"></canvas>
+
+  <a-entity class="button-inicio">
+    
+      <button  class="button-style2" type="submit" onclick="func()">Abrir menú</button>
+  
+  </a-entity>
+
+  <a-scene environment="preset: default;" cursor="rayOrigin: mouse;" raycaster="far: 100; objects: [link];">
+      
+
+
+    <a-assets>
+     
+      
+      <img id="an-image" src="img/indexImg.jpg" alt="an-image">
+          <img id="previewDefault"  src="img/Viviendas.jpeg" alt="image" >
+          <img id="previewVolcano"  src="img/ActividadAgricola.jpg" alt="image">
+          <img id="preview-camel"    src="img/Casadeloscamellos.jpg" alt="image">
+          <img id="preview-oil"   src="img/burro.jpg" alt="image">
+          <img id="preview-pan"   src="img/mural.jpg" alt="image">
+          <img id="preview-agricultor"    src="img/agricultor.jpg" alt="image">
+
+          <img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous" alt="img">
+
+          <img id="logo" src="img/logoSabiosGuias.png" alt="logo">
+
+          <img id="sabio1" src="img/sabio1.jpeg" alt="sabios">
+
+          <img id="sabio2" src="img/sabios2.jpeg" alt="sabios">
+
+          <img id="sabio3" src="img/sabios3.jpeg" alt="sabios">
+
+          <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
+
+          <audio id="click-sound" src="assets/click_sound.mp3" preload="auto"></audio>
+        
+    </a-assets>
+  
+<a-sky id="my-sky" material="src: #an-image">
+
+</a-sky>
+
+
+
+
+<a-entity position="-3 1 -6" rotation="5 0 0">
+     
+
+  <a-entity position="-2.9 2.8 -0.5" scale="0.4 1.2 1" text-geometry="value:Casco de La Villa de Agüimes; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color:#5078FA; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
+
+ 
+</a-entity>
+
+     
+
+  <a-entity position="12 1.6 -5" rotation="0 -100 0" text-geometry="value:Nuestros sabios guias.
+
+  Rafael Bordon, Dª Teresa Ruano, D. Rafael Estevez, Dª Paca Lopez y Dª Amelia Hernandez" ></a-entity>
+
+ 
+
+
+  
+<!--Sabios Guías-->
+
+<a-box src="#sabio1" position="8 2 5"  scale="2 2 2" rotation="0 50 0"
+animation="property: object3D.position.y; to: 1.2; dir: alternate; dur: 2000; loop: true"></a-box>
+<a-box src="#sabio2" position="8 2 9"  scale="2 2 2" rotation="0 50 0"
+animation="property: object3D.position.y; to: 1.2; dir: alternate; dur: 2000; loop: true"></a-box>
+<a-box src="#sabio3" position="8 2 13"  scale="2 2 2" rotation="0 50 0"
+animation="property: object3D.position.y; to: 1.2; dir: alternate; dur: 2000; loop: true"></a-box>
+
+
+
+
+<!--FIN-->
+
+<a-entity id="menu" visible="false">
+
+
+  <a-link	position="-4 1 -4" rotation="0 40 0"
+  href="pueblo.html" title="Mapa" image="#previewVolcano" class="clickable" sound="src: #click-sound" do-click-sound></a-link>
+
+  <a-link position="-2 1.6 -5" rotation="0 20 0"
+    href="casa_de_los_camellos.html" title="Casa de los Camellos" image="#preview-camel" class="clickable" sound="src: #click-sound" do-click-sound></a-link>
+  
+  <a-link position="0 1 -6" 
+    href="aceite_y_vinagre.html" title="Tienda aceite y vinagre" image="#preview-oil" class="clickable" sound="src: #click-sound" do-click-sound></a-link>
+  
+  <a-link position="2 1.6 -5" rotation="0 -20 0"
+    href="pl_del_rosario.html" title="Homenaje al Pan" image="#preview-pan" class="clickable" sound="src: #click-sound" do-click-sound></a-link>
+  
+  <a-link position="4 1 -4" rotation="0 -40 0"
+    href="homenaje_al_agricultor.html" title="Homenaje al Agricultor y al Regante
+    " image="#preview-agricultor" class="clickable" sound="src: #click-sound" do-click-sound></a-link>
+
+    <!--logo-->
+  <a-image src="#logo" position="0 -0.2 -4"></a-image>
+  <!--fin-->
+</a-entity>
+  
+  
+  </a-scene>
+  
+  </body>
+</html>

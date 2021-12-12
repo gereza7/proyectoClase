@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aceite y Vinagre</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+  <script src="index.js"></script>
+  <link rel="stylesheet" type="text/css" href="/A-frame/css/styles.css" media="screen" />
+</head>
+<body>
+  <div class="button">
+    <form action="/A-frame/3d_index.html">
+      <button class="button-style" type="submit">Volver al inicio</button>
+    </form>
+    </div>
+    
+  <a-scene >
+    <a-camera wasd-controls-enabled="false"></a-camera>
+      
+    <a-assets>
+      <img id="an-image2" src="/A-frame/img/burro.jpg" alt="an-image">
+          <img id="background"  src="/A-frame/img/Casadeloscamellos.jpg" alt="image" >
+          <audio autoplay loop>
+ 
+            <source src="/A-frame/sound/musicaCanaria.mp3">
+        
+          </audio>
+    </a-assets>
+  
+<a-sky id="my-sky2" material="src: #an-image2">
+
+</a-sky>
+<a-entity
+id="parent" position="2 -1.7 -9"
+rotation="0 -20"
+scale="3 5"
+  geometry="primitive: plane"
+  material="opacity: 0.0; transparent: true"
+  text="value: Los agricultores residentes en el Barranco de Guayadeque tenían asignados unos días concretos para ir a la Villa con sus mercancías. Las transportaban en burros, que dejaban amarrados en argollas situadas junto a las entradas de las tiendas. Mientras, intercambiaban productos agrícolas por otros artesanos. Solo vendían a cambio de dinero a las personas más pudientes. Esta situación fue cotidiana hasta mediados del s. XX.
+
+  Aquellas tienditas de aceite y vinagre  fueron los centros comerciales locales durante muchísimo tiempo. En ellas se conseguían productos de alimentación, de ferretería, de estanco o bazar, y de papelería. Desde queso y pescado salado hasta petróleo, carbón, sellos, tabaco, papel para cartas, productos de limpieza, desatascadores, cepillos, cubos, quinqués, escobas,… de todo." ><a-entity geometry="primitive:box;" material="shader:gif;src:url(/A-frame/img/aceitevinagre.gif)" scale="0.9 0.26" position="0.02 0.6 0.03"></a-entity>
+
+</a-entity>
+<a-entity
+id="parent2" position="2.01 -1 -9"
+rotation="0 -20"
+scale="3.2 6.2"
+  geometry="primitive: plane"
+  material="color: black"></a-entity>
+
+  <!--BORDER-->
+  <a-entity
+  id="border" position="2 -1 -9"
+  rotation="0 -20"
+  scale="3 6"
+    geometry="primitive: plane"
+    material="color: grey"></a-entity>
+
+  
+
+  
+  </a-scene>
+  
+  </body>
+</html>
