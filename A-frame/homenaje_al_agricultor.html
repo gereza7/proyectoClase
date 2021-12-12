@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homenaje al agricultor</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/A-frame/css/styles.css" media="screen" />
+  <script src="/A-frame/js/click_sound.js"></script>
+</head>
+<body>
+  <div class="button">
+    <form action="/A-frame/3d_index.html">
+      <button class="button-style" type="submit">Volver al inicio</button>
+    </form>
+    </div>
+    
+  <a-scene >
+      
+    <a-assets>
+      <img id="an-image2" src="/A-frame/img/agricultor.jpg" alt="an-image">
+          <img id="background"  src="/A-frame/img/agricultor.jpg" alt="image" >
+          
+    </a-assets>
+    <a-camera wasd-controls-enabled="false"></a-camera>
+    <a-entity position="2 1 3" rotation="0 -120">
+    <a-entity
+    id="parent" position="5 0.65 -3"
+    rotation="0 -40"
+    scale="3 5"
+      geometry="primitive: plane"
+      material="opacity: 0.0; transparent: true"
+      text="value: 
+      El lugar en el que se encuentra la escultura del agricultor delimita el casco antiguo de la antigua zona agricola. Esta obra se alza como acto de respeto a un estilo de vida que sustentó con esfuerzo a muchisimas generaciones.
+      
+      Junto al monumento al regante, ubicado a unos 100 metros del anterior, nos recuerdan un pasado reciente que, en justicia, merece pervivir en nuestra memoria." ><a-image src="/A-frame/img/pescador.jpeg" scale="1 0.545" position="0 0.5 0.01"></a-image>
+    
+    </a-entity>
+    <a-entity
+    id="parent2" position="5.01 2 -3"
+    rotation="0 -40"
+    scale="3.2 5.2"
+      geometry="primitive: plane"
+      material="color: black"></a-entity>
+
+      <!--BORDER-->
+      <a-entity
+      id="border" position="5 2 -3"
+      rotation="0 -40"
+      scale="3 5"
+        geometry="primitive: plane"
+        material="color: grey"></a-entity>
+        
+  </a-entity>
+  
+<a-sky id="my-sky2" material="src: #an-image2">
+
+</a-sky>
+
+
+  
+
+  
+  </a-scene>
+  
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plaza del Rosario</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/A-frame/css/styles.css" media="screen" />
+  <script src="/A-frame/js/video_show.js"></script>
+
+</head>
+<body>
+  <div class="button">
+    <form action="/A-frame/3d_index.html">
+      <button class="button-style" type="submit">Volver al inicio</button>
+      
+    </form>
+    </div>
+   
+    
+  <a-scene >
+    <a-camera wasd-controls-enabled="false"> <a-cursor></a-cursor></a-camera>
+      
+    <a-assets>
+      <img id="an-image3" src="/A-frame/img/mural.jpg" alt="an-image">
+          <img id="background"  src="/A-frame/img/mural.jpg" alt="image" >
+        
+
+          <video id="video" loop src="/A-frame/assets/pan.mp4"></video>
+          <img id="play1" src="/A-frame/img/play.png" alt="img">
+          <img id="pause" src="/A-frame/img/pause.png" alt="img1" >
+
+    </a-assets>
+  
+<a-sky id="my-sky-Rosario" material="src: #an-image3">
+
+</a-sky>
+
+
+
+<a-entity
+id="parent" position="2 1 -9"
+rotation="0 -20"
+scale="3 5"
+  geometry="primitive: plane"
+  material="opacity: 0.0; transparent: true"
+  text="value: Se cosechaba dos tipos de trigo: el trigo morisco, de espiga blanca que daba menor cantidad de grano y el trigo harinegro, de espiga negra que daba mayor cantidad. Con este último se elaboraba el pan. La calidad de este pan le proporciono fama y una gran demanda a nivel insular, lo que impulsó la aparicion de numerosas panaderias en la Villa." ></a-entity>
+
+  <a-entity  position="-5 1.5 -9" scale="8 5" rotation="5 5.7 0" visible="false" id="video-show">
+ 
+<a-video src="#video" ></a-video>
+
+  </a-entity>
+
+ <a-circle id="video-controls" class="clickeable" position="1 -2.6 -9" src="#play1" play-pause></a-circle>
+ 
+ <a-entity position="4 -2.6 -9">
+  <a-text>Ver Video</a-text>
+ </a-entity>
+
+
+
+<a-entity
+id="parent2" position="2.01 1 -9"
+rotation="0 -20"
+scale="3.2 2.2"
+  geometry="primitive: plane"
+  material="color: black"></a-entity>
+
+  <!--BORDER-->
+  <a-entity
+  id="border" position="2 1 -9"
+  rotation="0 -20"
+  scale="3 2"
+    geometry="primitive: plane"
+    material="color: grey"></a-entity>
+
+  
+  
+  </a-scene>
+  
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CasaCamellos</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="index.js"></script>
+  <link rel="stylesheet" type="text/css" href="/A-frame/css/styles.css" media="screen" />
+</head>
+<body>
+
+  <div class="button">
+    <form action="/A-frame/3d_index.html">
+      <button class="button-style" type="submit">Volver al inicio</button>
+    </form>
+    </div>
+  <a-assets>
+      
+      
+    <img id="an-image2" src="/A-frame/img/Casadeloscamellos.jpg" alt="an-image">
+        <img id="background"  src="/A-frame/img/CasaDeLosCamellos.jpg" alt="image" >
+    
+        <audio autoplay loop id="myaudio">
+
+          <source src="/A-frame/sound/aves_4.mp3" type="audio/mp3"  >
+        </audio>
+       
+     
+       
+      
+  </a-assets>
+  
+  <a-scene wasd-controls-enabled="false">
+    <a-camera wasd-controls-enabled="false"></a-camera>
+    <a-entity
+    id="parent" position="5 1.2 -3"
+    rotation="0 -40"
+    scale="3 5"
+      geometry="primitive: plane"
+      material="opacity: 0.0; transparent: true"
+      text="value: La memoria de nuestros sabios guías nos remonta a un tiempo en el que aquellos camellos transportaban los productos agrícolas tras haber intervenido previamente en las actividades agrícolas (arado de las tierras), y en donde, de niños, jugaban en el interior de este edificio antes de convertirse con los años en el actual Hotel Rural.
+
+      En origen fue una cuadra para los camellos que portaban cantería de Agüimes a Ingenio para la construcción de la Parroquia de La Candelaria (1815). Además, el edificio contaba con habitaciones en las que residían ocasionalmente sus propietarios." ><a-image src="img/casa.jpeg" scale="1 0.33" position="0 0.5 0.01"></a-image>
+    
+    </a-entity>
+    <a-entity
+    id="parent2" position="5.01 2 -3"
+    rotation="0 -40"
+    scale="3.2 5.2"
+      geometry="primitive: plane"
+      material="color: black"></a-entity>
+
+      <!--BORDER-->
+      <a-entity
+      id="border" position="5 2 -3"
+      rotation="0 -40"
+      scale="3 5"
+        geometry="primitive: plane"
+        material="color: grey"></a-entity>
+
+       
+    
+<a-sky id="my-sky2" material="src: #an-image2">
+
+</a-sky>
+
+
+
+
+  </a-scene>
+  
+  </body>
+</html>
